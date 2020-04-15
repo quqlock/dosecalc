@@ -1,6 +1,3 @@
-import 'screens/start_page.dart';
-import 'main.dart';
-import 'package:flutter/material.dart';
 import 'constans.dart';
 import 'dart:math';
 

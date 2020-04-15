@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../constans.dart';
 import '../dose_calc.dart';
 import 'result_page.dart';
@@ -12,6 +11,13 @@ class StartPage extends StatefulWidget {
 class _StartPageState extends State<StartPage> {
   double time = 0.00;
   double dose = 0.00;
+
+  @override
+  void initState() {
+    time = 0.00;
+    dose = 0.00;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

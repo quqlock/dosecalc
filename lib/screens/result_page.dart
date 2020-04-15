@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'start_page.dart';
-import '../dose_calc.dart';
 import '../constans.dart';
-import '../main.dart';
 
 class ResultPage extends StatelessWidget {
   ResultPage(
@@ -29,6 +26,14 @@ class ResultPage extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 20,
                 ),
+              ),
+            ),
+            Container(
+              child: FlatButton(
+                child: Text('Nowa kalkulacja'),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
               ),
             )
           ],

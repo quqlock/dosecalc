@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 //constats
 const kTitleApp = 'Dosimetric Calc v 0.1';
 
