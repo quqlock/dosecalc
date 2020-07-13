@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'constans.dart';
-import 'screens/start_page.dart';
+import 'screens/splash_screen.dart';
 
 void main() {
   runApp(new MaterialApp(home: new HomePage()));
@@ -11,8 +11,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: kTitleApp,
-      theme: ThemeData(primarySwatch: Colors.indigo),
-      home: StartPage(),
+      theme: ThemeData(primaryColor: Color(0xff16325A)),
+      home: SplashScreen(),
     );
   }
 }

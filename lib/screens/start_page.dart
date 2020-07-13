@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../constans.dart';
 import '../dose_calc.dart';
 import 'result_page.dart';
+import '../widgets/button.dart';
 
 class StartPage extends StatefulWidget {
   @override
@@ -11,13 +12,6 @@ class StartPage extends StatefulWidget {
 class _StartPageState extends State<StartPage> {
   double time = 0.00;
   double dose = 0.00;
-
-  @override
-  void initState() {
-    time = 0.00;
-    dose = 0.00;
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -91,16 +85,7 @@ class _StartPageState extends State<StartPage> {
                         );
                       }
                     },
-                    child: Container(
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: Theme.of(context).buttonColor,
-                        borderRadius: BorderRadius.circular(8.0),
-                      ),
-                      child: Center(
-                        child: Text('Przelicz dawki'),
-                      ),
-                    ),
+                    child: Button('Przelicz dawki'),
                   ),
                 ],
               ),

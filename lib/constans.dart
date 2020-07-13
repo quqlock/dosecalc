@@ -1,5 +1,7 @@
 //constats
-const kTitleApp = 'Dosimetric Calc v 0.1';
+const kTitleApp = 'DoseCalc - Kalkulator dawek';
+
+int kPrimaryColor = 0xff1d3056;
 
 const kDateTimeWeek = 1;
 const kDateTimeMonth = 13;

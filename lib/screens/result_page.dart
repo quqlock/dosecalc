@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../constans.dart';
+import '../widgets/button.dart';
 
 class ResultPage extends StatelessWidget {
   ResultPage(
@@ -28,14 +29,12 @@ class ResultPage extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              child: FlatButton(
-                child: Text('Nowa kalkulacja'),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
-            )
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Button('Nowa kalkulacja'),
+            ),
           ],
         ),
       ),
