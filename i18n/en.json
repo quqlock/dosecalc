@@ -1,16 +1,18 @@
 {
-  "title": "DoseCalc - Doses Calculator",
+  "appTitle": "DoseCalc - Doses Calculator",
   "inputDose" : "Dose [μSv]",
   "inputDoseHint": "Enter dose in μSv",
   "inputTime" : "Time [h/week]",
   "inputTimeHint": "Work time [h/week]",
   "buttonCalc": "Calc doses",
+  "resultHours": "[h/week]",
   "resultDose": "Dose",
   "resultTime": "Time",
   "resultDoseWeek": "Dose per week",
   "resultDoseMonth": "Dose per month",
   "resultDoseQuarter": "Dose per quarter",
   "resultDoseYear": "Dose per year",
-  "resultShare": "Share",
-  "buttonNewCalc": "New calculation"
+  "resultShare": "Share results",
+  "buttonNewCalc": "New calculation",
+  "linkText": "DoseCalc for Android"
 }

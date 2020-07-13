@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../constans.dart';
+import '../app_localizations.dart';
 import '../dose_calc.dart';
-import 'result_page.dart';
 import '../widgets/button.dart';
+import './result_page.dart';
 
 class StartPage extends StatefulWidget {
   @override
@@ -19,75 +19,83 @@ class _StartPageState extends State<StartPage> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            kTitleApp,
+            AppLocalizations.of(context).translate('appTitle'),
           ),
         ),
-        body: Center(
-          child: Container(
-            child: Padding(
-              padding: const EdgeInsets.all(36.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    child: TextFormField(
-                      onChanged: (value) {
-                        dose = double.parse(value.replaceAll(',', '.'));
-                        print('Dose:  $dose');
-                      },
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                        icon: Icon(Icons.pages),
-                        labelText: 'Dawka [μSv]',
-                        labelStyle: TextStyle(fontSize: 20),
-                        contentPadding:
-                            EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                        hintText: 'Podaj dawkę w μSv',
+        body: SingleChildScrollView(
+          child: Center(
+            child: Container(
+              child: Padding(
+                padding: const EdgeInsets.all(36.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      child: TextFormField(
+                        onChanged: (value) {
+                          dose = double.parse(value.replaceAll(',', '.'));
+                        },
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          icon: Icon(Icons.pages),
+                          labelText: AppLocalizations.of(context)
+                              .translate('inputDose'),
+                          labelStyle: TextStyle(fontSize: 20),
+                          contentPadding:
+                              EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                          hintText: AppLocalizations.of(context)
+                              .translate('inputDoseHint'),
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  Container(
-                    child: TextFormField(
-                      onChanged: (value) {
-                        time = double.parse(value.replaceAll(',', '.'));
-                        print('Time:  $time');
-                      },
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(
-                        icon: Icon(Icons.access_time),
-                        labelText: 'Czas [h]',
-                        labelStyle: TextStyle(fontSize: 20),
-                        contentPadding:
-                            EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-                        hintText: 'Podaj czas pracy w h / tydzień',
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    Container(
+                      child: TextFormField(
+                        onChanged: (value) {
+                          time = double.parse(value.replaceAll(',', '.'));
+                        },
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          icon: Icon(Icons.access_time),
+                          labelText: AppLocalizations.of(context)
+                              .translate('inputTime'),
+                          labelStyle: TextStyle(fontSize: 20),
+                          contentPadding:
+                              EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+                          hintText: AppLocalizations.of(context)
+                              .translate('inputTimeHint'),
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      if (time != 0.00 && dose != 0.00) {
-                        DoseCalc calc = DoseCalc(dose: dose, time: time);
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ResultPage(
-                              resultText: calc.getDose(),
-                              resultDose: dose,
-                              resultTime: time,
+                    SizedBox(
+                      height: 20.0,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        if (time != 0.00 && dose != 0.00) {
+                          DoseCalc calc = DoseCalc(dose: dose, time: time);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ResultPage(
+                                resultDose: dose,
+                                resultTime: time,
+                                resultDoseWeek: calc.getDoseWeek(),
+                                resultDoseMonth: calc.getDouseMonth(),
+                                resultDoseQuarter: calc.getDoseQuarter(),
+                                resultDoseYear: calc.getDoseYear(),
+                              ),
                             ),
-                          ),
-                        );
-                      }
-                    },
-                    child: Button('Przelicz dawki'),
-                  ),
-                ],
+                          );
+                        }
+                      },
+                      child: Button(
+                          AppLocalizations.of(context).translate('buttonCalc')),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
