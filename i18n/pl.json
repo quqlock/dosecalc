@@ -1,0 +1,16 @@
+{
+  "title": "DoseCalc - Kalkulator dawek",
+  "inputDose" : "Dawka [μSv]",
+  "inputDoseHint": "Podaj dawkę w μSv",
+  "inputTime" : "Czas [h/tydz]",
+  "inputTimeHint": "Czas pracy w h/tydz",
+  "buttonCalc": "Przelicz dawki",
+  "resultDose": "Dawka",
+  "resultTime": "Czas",
+  "resultDoseWeek": "Dawka na tydzień",
+  "resultDoseMonth": "Dawka na tydzień",
+  "resultDoseQuarter": "Dawka na tydzień",
+  "resultDoseYear": "Dawka na tydzień",
+  "resultShare": "Udostępnij",
+  "buttonNewCalc": "Nowa kalkulacja"
+}

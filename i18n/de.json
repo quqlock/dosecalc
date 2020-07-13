@@ -1,0 +1,16 @@
+{
+  "title": "DoseCalc - Dosisrechner",
+  "inputDose" : "Dose [μSv]",
+  "inputDoseHint": "Geben Sie die Dosis in μSv ein",
+  "inputTime" : "Zeit [Std/Woche]",
+  "inputTimeHint": "Arbeitszeit [Std/Woche]",
+  "buttonCalc": "Dosen Umwandeln",
+  "resultDose": "Dose",
+  "resultTime": "Zeit",
+  "resultDoseWeek": "Dosis pro Woche",
+  "resultDoseMonth": "Dosis pro Monat",
+  "resultDoseQuarter": "Dosis pro Quartal",
+  "resultDoseYear": "Dosis pro Jahr",
+  "resultShare": "Teilen",
+  "buttonNewCalc": "Neue Berechnung"
+}
