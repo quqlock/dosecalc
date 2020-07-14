@@ -1,5 +1,6 @@
 {
   "appTitle": "DoseCalc - Kalkulator dawek",
+  "appFor": "Quales.pl - Twój IOR",
   "inputDose" : "Dawka [μSv]",
   "inputDoseHint": "Podaj dawkę w μSv",
   "inputTime" : "Czas [h/tydz]",
@@ -13,6 +14,13 @@
   "resultDoseQuarter": "Dawka na kwartał",
   "resultDoseYear": "Dawka na rok",
   "resultShare": "Udostępnij wyniki",
+  "resultInfo": "Informacja",
+  "resultInfoText": "Przedstawione wyniki zostały wyliczone z najwyższą dokładnością. Nie ponosimy jednak żadnej odpowiedzialności za ich prawidłowość.",
   "buttonNewCalc": "Nowa kalkulacja",
-  "linkText": "DoseCalc na Android"
+  "linkText": "DoseCalc na Android",
+  "menuLang": "Język",
+  "menuAbout": "O aplikacji",
+  "menuLink": "Odwiedź Quales.pl",
+  "aboutDesc": "Kalkulator dawek DoseCalc powstał z myślą o łatwym i szybkim wyliczeniu potencjalnych dawek promieniowania otrzymywanych na stanowisku pracy w warunkach narażenia. Jeżeli pracujesz w urządzeniem emitującym promieniowanie jonizującej w łatwy sposób możesz sprawdzić jakie dawki możesz otrzymać w ciągu tygodnia, miesiąca, kwartału i roku.",
+  "aboutButton": "Powrót do aplikacji"
 }

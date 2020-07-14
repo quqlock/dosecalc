@@ -52,7 +52,9 @@ class ResultPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context).translate('appTitle')),
+        title: Text(
+          AppLocalizations.of(context).translate('appTitle'),
+        ),
       ),
       body: Center(
         child: Column(
@@ -72,7 +74,7 @@ class ResultPage extends StatelessWidget {
             Container(
               width: 200,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   GestureDetector(
                     onTap: () {
@@ -84,15 +86,31 @@ class ResultPage extends StatelessWidget {
                     },
                     child: Column(
                       children: <Widget>[
-                        Icon(
-                          Icons.share,
+                        IconButton(
+                          icon: Icon(Icons.share),
                           color: Color(kPrimaryColor),
                         ),
                         Text(AppLocalizations.of(context)
                             .translate('resultShare')),
                       ],
                     ),
-                  )
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Tooltip(
+                        showDuration: Duration(seconds: 10),
+                        height: 80,
+                        message: AppLocalizations.of(context)
+                            .translate('resultInfoText'),
+                        child: IconButton(
+                          icon: Icon(Icons.warning),
+                          color: Color(kPrimaryColor),
+                        ),
+                      ),
+                      Text(
+                          AppLocalizations.of(context).translate('resultInfo')),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -101,7 +119,7 @@ class ResultPage extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.pop(context);
+                Navigator.pushNamed(context, '/startPage');
               },
               child: Button(
                 AppLocalizations.of(context).translate('buttonNewCalc'),

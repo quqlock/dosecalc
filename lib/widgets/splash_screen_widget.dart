@@ -32,7 +32,7 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget> {
                 'DoseCalc',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 20,
+                  fontSize: 30,
                 ),
               ),
             ),

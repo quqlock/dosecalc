@@ -22,16 +22,18 @@ BlocProvider<SplashScreenBloc> _buildBody(BuildContext context) {
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
       color: Color(kPrimaryColor),
-      child: Center(child: BlocBuilder<SplashScreenBloc, SplashScreenState>(
-        builder: (context, state) {
-          if ((state is SplashScreenInitial) ||
-              (state is SplashScreenLoading)) {
-            return SplashScreenWidget();
-          } else if (state is SplashScreenLoaded) {
-            return StartPage();
-          }
-        },
-      )),
+      child: Center(
+        child: BlocBuilder<SplashScreenBloc, SplashScreenState>(
+          builder: (context, state) {
+            if ((state is SplashScreenInitial) ||
+                (state is SplashScreenLoading)) {
+              return SplashScreenWidget();
+            } else if (state is SplashScreenLoaded) {
+              return StartPage();
+            }
+          },
+        ),
+      ),
     ),
   );
 }

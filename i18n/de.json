@@ -1,5 +1,6 @@
 {
   "appTitle": "DoseCalc - Dosisrechner",
+  "appFor": "Quales.pl",
   "inputDose" : "Dose [μSv]",
   "inputDoseHint": "Geben Sie die Dosis in μSv ein",
   "inputTime" : "Zeit [Std/Woche]",
@@ -13,6 +14,13 @@
   "resultDoseQuarter": "Dosis pro Quartal",
   "resultDoseYear": "Dosis pro Jahr",
   "resultShare": "Ergebnisse teilen",
+  "resultText": "Information",
+  "resultInfoText": "Die dargestellten Ergebnisse wurden mit höchster Genauigkeit berechnet. Wir übernehmen jedoch keine Haftung für deren Richtigkeit.",
   "buttonNewCalc": "Neue Berechnung",
-  "linkText": "DoseCalc für Android"
+  "linkText": "DoseCalc für Android",
+  "menuLang": "Sprache",
+  "menuAbout": "About",
+  "menuLink": "Zum Quales.pl",
+  "aboutDesc": "Der DoseCalc-Dosisrechner wurde entwickelt, um potenzielle Strahlungsdosen, die am Arbeitsplatz unter Expositionsbedingungen empfangen werden, einfach und schnell zu berechnen. Wenn Sie in einem Gerät arbeiten, das ionisierende Strahlung emittiert, können Sie leicht überprüfen, welche Dosen Sie während der Woche, des Monats, des Quartals und des Jahres erhalten können.",
+  "aboutButton": "Zurück zur App"
 }

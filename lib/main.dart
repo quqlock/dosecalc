@@ -1,7 +1,10 @@
+import 'package:dosimetric_calc/screens/result_page.dart';
+import 'package:dosimetric_calc/screens/start_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import './screens/splash_screen.dart';
 import './app_localizations.dart';
+import './screens/about_page.dart';
 
 void main() {
   runApp(new MaterialApp(home: new HomePage()));
@@ -32,7 +35,13 @@ class HomePage extends StatelessWidget {
         }
         return supportedLocales.first;
       },
-      home: SplashScreen(),
+      routes: {
+        '/': (context) => SplashScreen(),
+        '/startPage': (context) => StartPage(),
+        '/resultPage': (context) => ResultPage(),
+        '/aboutPage': (context) => AboutPage(),
+      },
+      initialRoute: '/',
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/drawer_x.dart';
 import '../app_localizations.dart';
 import '../dose_calc.dart';
 import '../widgets/button.dart';
@@ -14,6 +15,17 @@ class _StartPageState extends State<StartPage> {
   double dose = 0.00;
 
   @override
+  void initState() {
+    setState(
+      () {
+        time = 0.00;
+        dose = 0.00;
+      },
+    );
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
@@ -22,6 +34,7 @@ class _StartPageState extends State<StartPage> {
             AppLocalizations.of(context).translate('appTitle'),
           ),
         ),
+        drawer: DrawerX(),
         body: SingleChildScrollView(
           child: Center(
             child: Container(
@@ -92,7 +105,8 @@ class _StartPageState extends State<StartPage> {
                         }
                       },
                       child: Button(
-                          AppLocalizations.of(context).translate('buttonCalc')),
+                        AppLocalizations.of(context).translate('buttonCalc'),
+                      ),
                     ),
                   ],
                 ),

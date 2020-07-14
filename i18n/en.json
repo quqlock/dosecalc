@@ -1,5 +1,6 @@
 {
   "appTitle": "DoseCalc - Doses Calculator",
+  "appFor": "by Quales.pl",
   "inputDose" : "Dose [μSv]",
   "inputDoseHint": "Enter dose in μSv",
   "inputTime" : "Time [h/week]",
@@ -13,6 +14,13 @@
   "resultDoseQuarter": "Dose per quarter",
   "resultDoseYear": "Dose per year",
   "resultShare": "Share results",
+  "resultInfo": "Information",
+  "resultInfoText": "Presented results have been calculated with the highest accuracy. However, we assume no liability for their correctness.",
   "buttonNewCalc": "New calculation",
-  "linkText": "DoseCalc for Android"
+  "linkText": "DoseCalc for Android",
+  "menuLang": "Language",
+  "menuAbout": "About",
+  "menuLink": "Go to Quales.pl",
+  "aboutDesc": "The DoseCalc dose calculator was created to easily and quickly calculate potential radiation doses received at the workplace in exposure conditions. If you work in a device that emits ionizing radiation, you can easily check what doses you can receive during the week, month, quarter and year.",
+  "aboutButton": "Back to app"
 }
