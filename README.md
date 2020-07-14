@@ -1,6 +1,6 @@
 # dosimetric_calc
 
-Dosimetric calc application for specialists
+Dosimetric calc application for specialists and radiological officers.
 
 ## Getting Started
 
